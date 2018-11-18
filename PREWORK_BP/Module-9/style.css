@@ -1,0 +1,49 @@
+.center {
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.big {
+    font-size: xx-large;
+}
+
+.small {
+    font-size: x-small;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bigOrangeBold {
+    font-size: x-large;
+    color: orange;
+    font-weight: bold;
+}
+
+.styledFont {
+    color: green;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.border {
+    margin: auto;
+    width: auto;
+    border: 10px solid orange;
+}
