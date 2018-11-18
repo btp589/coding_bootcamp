@@ -1,0 +1,8 @@
+Performed git clone to pull file down to local from master
+git status - to see status
+cd into the project folder
+git diff - to see the changes
+git add filename to add the file
+git commit -m "message"
+git push origin master
+

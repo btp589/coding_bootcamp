@@ -1,0 +1,39 @@
+Typography
+https://fonts.google.com
+https://fontawesome.com/v4.7.0/icons/
+-------------------------------------
+
+Properties:
+Line Height - space between fonts.
+Font-Size - how big fonts are, 16px on modern pages.
+Line Length - Should be about 50-75 characters per line
+Letter Spacing - spacing between individual letters
+Sans-Serif vs Serif - Serif has lines
+
+
+
+Pseudo Classes
+https://www.w3schools.com/css/css_pseudo_classes.asp
+----------------------------------------------------
+
+Various STATES:
+Default state - how it statically appears
+Hover state - while hovering over
+focus state - after clicking
+active state - while clicking
+
+
+
+BOOTSTRAP
+https://getbootstrap.com/docs/4.1/getting-started/introduction/
+---------------------------------------------------------------
+
+Predefined CSS
+Provides UI Kit that you can copy and paste snippets.
+Mobile Responsiveness - allows website to work well on all screen devices.
+
+
+
+W3 Validator
+https://validator.w3.org/#validate_by_uri+with_options
+------------------------------------------------------

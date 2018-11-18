@@ -1,0 +1,17 @@
+position: static (Default)
+- Render on page according to natural flow of HTML
+
+position: relative
+- Nudge the boxes in relation to their "original" location.
+
+position: absolute
+- Uses coordinates (similar to (x,y) coordinates)
+- Will not scroll with page.
+
+position: fixed
+- Uses coordinates but stays even while the page is scrolled, such as navigation bars.
+
+
+Layering with Z-Index
+- Allows for layered elements on top of each other when they're positioned.
+
