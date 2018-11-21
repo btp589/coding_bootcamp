@@ -1,0 +1,21 @@
+Grid Layout
+-----------
+Rows are containers
+Columns are where contents reside
+
+Bootstrap Grid
+--------------
+Bootstrap lets you organize content based on the "number of columns" a div spans - out of a total 12 columns.
+Ex:
+<div class="col-md-12">
+(spans full width)
+
+<div class="col-md-4>
+(spans 1/3 of full width)
+
+
+Media Query
+-----------
+@media screen and (max-width: 768px) {
+
+}
