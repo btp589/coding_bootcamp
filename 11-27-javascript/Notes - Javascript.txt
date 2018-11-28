@@ -1,0 +1,21 @@
+JAVASCRIPT
+----------
+var name = "Snow White";
+keyword: var
+variable name: name
+assignment: =
+value = "Snow White"
+termination: ;
+
+Passing confirm() and prompt() to a variable:
+var doesEatSteak = confirm("Do you eat steak?");
+var birthYear = prompt("What year were you born?");
+
+Use document.write to write to the browser page.
+
+How to declare the number of elements an empty array can hold?
+Can one array have more than 1 type of element in it?
+
+
+
+RESOURCES: https://eloquentjavascript.net
