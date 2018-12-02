@@ -1,0 +1,23 @@
+Print each element of array out to the console:
+console.log("First statement");
+    console.log(drinks[0]);
+    console.log(drinks[1]);
+    console.log(drinks[2]);
+    console.log(drinks[3]);
+
+for loop:
+---------
+for (var i = 0; i < vegetables.length; i++) {
+        console.log("I love " + vegetables[i]);
+      }
+
+- prepends "I love " to the front of each vegetables elements.
+
+var i = 0;
+- Initializes the counter to 0 (index 0).
+
+i < vegetables.length;
+- Condition to continue the loop.
+
+i++
+- Updates counter by 1 each time the loop is ran.

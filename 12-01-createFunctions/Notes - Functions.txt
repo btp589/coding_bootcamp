@@ -1,0 +1,75 @@
+Defining a function
+-------------------
+
+var sayHello = function("name") {
+	return "Hello!" + name;
+}
+
+- functions do not require a parameter; can be empty.
+- a function can take in a value and can also return a value if necessary.
+- the sayHello function takes in a value and returns a string.
+- to run(call, invoke) the function sayHello: sayHello()
+
+var sayHello = function("name") {
+	alert("Hello!" + name);
+}
+
+- calling the function sayHello(name) will now pop up an alert on the page??
+
+- If the same type of work is performed over and over again, it may be a good idea to create a function.
+- DRY (Donot Repeat Yourself)
+
+OBJECT
+------
+
+var obj = { "firstName": "Bao", "lastName": "Phan" };
+
+- syntax on how to define an object.
+- separated by commas to add more property:value
+- propery:value
+
+obj["firstName"]; // "Bao"
+obj.firstName; // "Bao"
+
+obj.lastName; // "Phan"
+
+- how to reference the object.
+- when a function is a property of an object, it is called a METHOD.
+
+
+
+function(event) {
+	var key = event.key;
+	console.log(key);
+
+}
+
+
+Shadowing a variable
+--------------------
+
+var name = "Bao";
+
+var sayHi = function(name) {
+	console.log("Hi, " + name);
+}
+
+sayHi("Jim");
+- Hi, Jim
+- Local variable takes presedence over the global variable inside a function.
+- Try not to have too many global variables because it can go inside all other functions within the global scope.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

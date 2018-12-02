@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>hard-loop</title>
+  </head>
+  <body>
+
+    <script>
+
+      // Array of farm animals.
+      var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+
+      // Code that loops through the following array and logs the name of each animal on the farm to the console
+
+      for (var i = 0; i < myFarm.length; i++) {
+        var animalName = myFarm[i];
+
+        if (animalName.charAt(0) == "c" || animalName.charAt(0) == "o") {
+            console.log(myFarm[i] + " starts with 'c' or 'o'!");
+            alert(myFarm[i] + " starts with 'c' or 'o'!");
+        }
+        
+      }
+
+    </script>
+    
+  </body>
+</html>
