@@ -1,0 +1,57 @@
+DOM Manipuation
+---------------
+
+.textContent
+.innerText
+.innerHTML
+
+- Properties used to change the texts in any divs.
+- Getting a variable and updating a property and the browser re-renders.
+- Functions <-> Methods
+
+testDiv.style.border = "1px solid red"
+
+- Changes the border to a red, 1px border.
+
+var newDiv = document.createElement("div");
+      newDiv.textContent = "A pleasure to meet you!";
+
+- Creates a new element (newDiv) using the document.createElement method.
+- This does not appear on the visible page yet.
+
+targetDiv.append
+
+---
+
+document.createElement("div");
+- div can be h1, p, h2, etc.
+
+forEach(function)
+- Expects a call back for the function specified.
+- Repeatedly calls the function for each element in the array.
+
+
+JQUERY
+api.jquery.com
+--------------
+- Javascript library
+1. Include a CDN link to the JQuery script:
+<script src="https:// .js">
+</script>
+2. Using jQuery specific ($) selector...
+$("#clickMe")
+3. Then applying jQuery methods on the selected elements.
+	$("#clickMe").on("click", function(){
+	alert("I've been clicked!");
+	})
+
+$("div")
+- Tries to find all div elements on the page
+
+$("<div>")
+- Creates a new <div> element
+
+$(document).ready(function() {
+codes
+
+- "document.ready" makes sure that our JavaScript doesn't get run until the HTML document is finished loading.
