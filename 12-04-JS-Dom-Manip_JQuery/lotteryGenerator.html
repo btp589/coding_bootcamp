@@ -33,24 +33,31 @@
   <script type="text/javascript">
 
     
-
+    // grabs a random digit between 1 and 9.
     function getNextDigit () {
-        return Math.floor(Math.random() * 10);
+        return Math.floor(Math.random() * 10); //returns the lowest whole number between 1-9
     }
 
     $(document).ready(function() {
 
       // CREATE THE MISSING CODE HERE. Your code should add content to the random-number div.
       // ...
-      var randNumDiv = $("#random-number");
-      $("#random-button").on("click", function() {
-        var lottoNum = "";
-        for (var i = 0; i < 9; i++) {
-            lottoNum += getNextDigit();
+      var randNumDiv = $("#random-number"); //similar to getElementById("random-number") and assigns this value to the randNumDiv variable
+      //when the user clicks the random-button, perform the function
+      //looks like $(selector).click(function()) also works?
+      $("#random-button").on("click", function() { 
+        var lottoNum = ""; //creates String variable for lottoNum
+        //loops 9 times
+        for (var i = 0; i < 9; i++) { 
+            lottoNum += getNextDigit(); //adds a random digit between 1-9 by calling the getNextDigit() function
         }
 
-        console.log(lottoNum);
-        randNumDiv.prepend("<div>" + lottoNum + "</div>");
+        //logs the value of lottoNum after the above for loops ran 9 times to console.log()
+        console.log(lottoNum); 
+        
+        //prepends the string of 9 randomly generated numbers to the top of the list everytime the user clicks the button
+        //prepends lottoNUM to randNumDiv which then puts it into <h1> in HTML
+        randNumDiv.prepend("<div>" + lottoNum + "</div>"); 
         
       });
       
