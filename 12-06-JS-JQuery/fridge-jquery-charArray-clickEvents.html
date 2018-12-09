@@ -58,12 +58,12 @@
   <script type="text/javascript">
     $(document).ready(function() {
 
-      // Here we are provided an initial array of letters.
+     
 
       //for loop to generate the A-Z array
-      function genCharArray(charA, charZ) {
+      function genCharArray(charA, charZ) {  //takes in 2 parameters
         var charArray = [];
-        var i = charA.charCodeAt(0);
+        var i = charA.charCodeAt(0);  //
         var j = charZ.charCodeAt(0);
         // loops as many times as needed for letter range A-Z
         for (; i <= j; ++i) {
@@ -73,6 +73,7 @@
       }
       console.log(genCharArray('A', 'Z'));
       
+      // Here we are provided an initial array of letters.
       // Assigns the A-Z array to letters.
       var letters = genCharArray('A', 'Z');
 
