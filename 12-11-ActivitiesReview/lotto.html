@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lotto</title>
+    <!-- Link to JQuery library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Added a link to Font Awesome CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+
+        <h1 class="text-center">Generate Lottery Numbers!</h1>
+  
+        <div class="text-center">
+  
+          <!-- Here we have our button with id random-button -->
+          <button class="btn btn-primary btn-lg" id="random-button"><h1><span class="fa fa-question"></span></h1></button>
+  
+        </div>
+  
+      </div>
+  
+      <!-- Here we have the div where our number will go called random-number -->
+      <h1 class="text-center" id="random-number"></h1>
+
+      <script type="text/javascript">
+        $(document).ready(function() {
+          
+          $("#random-button").on("click", function () {
+            var lottoNumber = "";
+            
+            for (var i = 0; i < 9; i++) {
+              var randNumber = Math.floor((Math.random() * 9 ) + 1);
+            
+            lottoNumber = lottoNumber + randNumber;
+            }
+            $("#random-number").prepend("<br>" + lottoNumber);
+
+          });
+          
+          
+              
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
