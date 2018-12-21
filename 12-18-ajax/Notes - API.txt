@@ -1,0 +1,17 @@
+What is an API?
+
+- It is a software intermediary that allows two applications to talk to each other. In other words, an API is the messenger that delivers your request to the provider that you’re requesting it from and then delivers the response back to you.
+- How you interact with software that someone created.
+
+What does API stand for?
+
+- Stands for Application Programming Interface.
+
+What are some examples of APIs? (Find links to specific APIs)
+
+- Booking a flight online.
+- Web API's such as: Simple Object Access Protocol(SOAP), Remote Procedure Call(RPC), Representational State Transfer(REST).
+- Google Maps, YouTube, Flickr, Twitter, Amazon
+
+What do these specific APIs allow you as a developer to do?
+- Allows the developer to 
