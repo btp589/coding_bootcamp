@@ -1,0 +1,9 @@
+JSON
+----
+
+- Javascript Object Notation
+- A lightweight data-interchangeable format used to correlate keys with values.
+- Use $.ajax jQuery method to retrieve data from api server.
+- Pass URL and METHOD into ajax method.
+-- For now we are using Method: 'GET'
+- 

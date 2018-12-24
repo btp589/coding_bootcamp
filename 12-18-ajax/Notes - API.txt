@@ -14,4 +14,6 @@ What are some examples of APIs? (Find links to specific APIs)
 - Google Maps, YouTube, Flickr, Twitter, Amazon
 
 What do these specific APIs allow you as a developer to do?
-- Allows the developer to 
+- Allows the developer to interact with software created by other developers.
+
+JSON - Javascript Object Notation

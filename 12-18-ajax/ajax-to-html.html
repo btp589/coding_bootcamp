@@ -46,21 +46,21 @@
     // The below creates a function to grab the info for the Movie and create and the rows.
     function getMovieInfo(response) {
 
-                // Create and save a reference to new empty table row
-                console.log(response);
-                var newRow = $("<tr>");
+      // Create and save a reference to new empty table row
+      console.log(response);
+      var newRow = $("<tr>");
 
-                // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
-                var cellTitle = $("<td>").text(response.Title);
-                var cellYear = $("<td>").text(response.Year);
-                var cellActors = $("<td>").text(response.Actors);
-                
-                // Append the td elements to the new table row
-                newRow.append(cellTitle, cellYear, cellActors);
-                
-                // Append the table row to the tbody element
-                $("tbody").append(newRow);
-              }
+      // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
+      var cellTitle = $("<td>").text(response.Title);
+      var cellYear = $("<td>").text(response.Year);
+      var cellActors = $("<td>").text(response.Actors);
+      
+      // Append the td elements to the new table row
+      newRow.append(cellTitle, cellYear, cellActors);
+      
+      // Append the table row to the tbody element
+      $("tbody").append(newRow);
+    }
 
     addMovieInfo("Avengers");
     addMovieInfo("The Lion King");
