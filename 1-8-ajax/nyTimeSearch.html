@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>NY Time Search</title>
+</head>
+
+<body>
+    <div id="buttons">
+        <button>
+          Search
+        </button>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      //
+      $("buttons").on("click", function() {
+  
+        //storing query URL
+        var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+        'api-key': "1da6229a63ed45acb68a2e33ea027098"
+        });
+        //makes ajax request
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+  
+        //setting up function to be called once response is received from the server
+          .then(function(response) {
+            console.log(response);
+          
+
+
+          });
+      });
+    </script>
+  </body>
+
+</html>

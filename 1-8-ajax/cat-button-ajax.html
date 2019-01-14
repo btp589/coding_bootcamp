@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Magical Cat Button</title>
+</head>
+
+<body>
+  <button id="cat-button">magical cat button</button>
+  <div id="images">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    //performs the following button everytime the cat-button id is clicked
+    $("#cat-button").on("click", function() {
+
+      //storing a URL to get cat gifs
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cats";
+
+      //makes ajax request to the cat gifs URL
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+      //setting up function to be called once response is received from the server
+        .then(function(response) {
+          console.log(response);
+        //grabbing image URL from response and storing in a variable
+          var imageUrl = response.data.image_original_url;
+
+          //creates an image element tag and stores it in a variable
+          //not yet added to the DOM and will not show up on the page
+          var catImage = $("<img>");
+
+          //set the 'src' and 'alt' attribute of our newly created image element
+          catImage.attr("src", imageUrl);
+          catImage.attr("alt", "cat image");
+
+          //select an existing element on the page (#images) and prepend our newly created element to it
+          //now our image has been added to the DOM and will be rendered
+          $("#images").prepend(catImage);
+        });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+DATA PERSISTENCE:
+-----------------
+
+localStorage:
+- Save to localStorage:
+localStorage.setItem("name", name);
+- Retrieve from localStorage:
+localStorage.getItem("name");
+- To clear localStorage:
+localStorage.clear();
+
+Cookies:
+--------
+
+document.cookie
+
+- To add values onto cookie:
+document.cookie = "name"
+
+JSON.stringify
