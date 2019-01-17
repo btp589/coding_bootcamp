@@ -1,0 +1,54 @@
+
+- Sets values to ref and replaces existing values:
+database.ref().set({
+	name: "bao"
+})
+
+
+- Assigns values to ref and appends to existing values:
+database.ref().push({
+	name: "bao"
+})
+
+// The callback function specified will be called for each child in the DB
+database.ref().on("child_added", function(snapshot)
+{
+	var employee = snapshot.val();
+
+	// Append a table row to display employee data
+	// 1. Make a new <tr> element
+	// 2. Fill in the html for it
+	// 3. Append that tr element to the tbody
+});
+
+
+USING MOMENT JS
+---------------
+
+- Format:
+var now = moment()
+now.format("h:mm:ss a")
+now.format("YYYY")
+now.format("M/YYYY")
+
+- Parse a date for calculations:
+var start = "01/01/2010";
+moment(start, "MM/DD/YYYY").fromNow();
+- Calculates date from current date
+moment(start, "MM/DD/YYYY") - moment();
+moment(start, "MM/DD/YYYY").diff(moment(), "months");
+
+var start = "11/08/2018";
+moment().diff(moment(start), "months");
+var start = "01/01/2010"
+
+
+// Parses a date string
+ into a moment object, then formats it into Unix time
+var startAsUnix = moment(start).format("X")
+
+
+
+// Parses a date string in unix time and formats as month/day/year
+
+moment("1262332800","X").format("MM/DD/YYYY")

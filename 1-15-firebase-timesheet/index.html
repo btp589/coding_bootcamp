@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Employee Tracker</title>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <!-- LINK TO MOMENT JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <br>
+
+    <!-- Jumbotron Title -->
+    <div class="jumbotron">
+      <h1 class="text-center">Employee Timesheet</h1>
+    </div>
+
+  
+
+  <!-- Employee table -->
+  <table class="table table-hover">
+      <div class="card-header text-white bg-secondary"><b>
+          Current Employees
+        </b></div>
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Role</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">Months Worked</th>
+      <th scope="col">Monthly Rate ($)</th>
+      <th scope="col">Total Bill ($)</th>
+    </tr>
+  </thead>
+  <!-- tbody to render rows into later in script-->
+  <tbody id="employee-row">
+  </tbody>
+
+</table>
+</div>
+<br> <br> <br>
+
+  <!-- Employee data -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card card-default">
+        <div class="card-header text-white bg-secondary"><b>
+          Add Employees
+        </b></div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="employee-name"><b>Employee Name</b></label>
+              <input class="form-control" id="employee-name-input" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="employee-role"><b>Employee Role</b></label>
+              <input class="form-control" id="role-input" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="start-date"><b>Start Date (MM/DD/YYY)</b></label>
+              <input class="form-control" id="start-input" type="date">
+            </div>
+            <div class="form-group row">
+              <label for="monthly-rate"><b>Monthly Rate</b></label>
+              <input class="form-control" id="rate-input" type="number">
+            </div>
+            <button class="btn btn-primary" id="add-employee-button" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+
+
+
+  <!-- Script -->
+  <script>
+
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBluw0_IVPONNeI-eGflP0rHbPyafLk7_M",
+      authDomain: "classproject-c158a.firebaseapp.com",
+      databaseURL: "https://classproject-c158a.firebaseio.com",
+      projectId: "classproject-c158a",
+      storageBucket: "classproject-c158a.appspot.com",
+      messagingSenderId: "525268441532"
+    };
+    firebase.initializeApp(config);
+
+    // Created variable to reference the database
+    var database = firebase.database();
+
+    // Captuyre submit click to add employee
+    $("#add-employee-button").on("click", function(){
+        // Prevents page refresh
+        event.preventDefault();
+
+        // Create object with properties set to input field values
+        var employeeInfo = {
+        name: $("#employee-name-input").val().trim(),
+        role: $("#role-input").val().trim(),
+        start: $("#start-input").val().trim(),
+        rate: $("#rate-input").val().trim(),
+        }
+        console.log(employeeInfo);
+
+        // Checks for all input fields to have values before pushing to database
+        if (employeeInfo.name.length > 0 && 
+        employeeInfo.role.length > 0 &&
+        employeeInfo.start.length > 0 &&
+        employeeInfo.rate.length > 0) {
+            database.ref().push(employeeInfo)
+        }
+    });
+
+    // The callback function specified will be called for each child in the DB
+    database.ref().on("child_added", renderInfo,
+        
+        function(errorObject) {
+            console.log("child:", employeeDataDb)
+            console.log("The read failed: " + errorObject.code);
+    });
+
+    // Function to append a table row to display employee data
+    function renderInfo(snapshot) {
+        var employeeDataDb = snapshot.val();
+        var startDate = moment(employeeDataDb.start, "YYYY-MM-DD");
+        var monthsWorked = moment().diff(startDate, "months");
+
+        // 1. Make a new <tr> element
+        var newRow = $("<tr>").append(
+        // 2. Make a new <td> element and store properties from object from database
+            $("<td>").text(employeeDataDb.name),
+            $("<td>").text(employeeDataDb.role),
+            $("<td>").text(startDate.format("MM/DD/YYYY")),
+            $("<td>").text(monthsWorked),
+            $("<td>").text(employeeDataDb.rate),
+        );
+        // 3. Append tr element to the tbody
+        $("#employee-row").append(newRow);
+    };
+
+  </script>
+
+</body>
+
+</html>
