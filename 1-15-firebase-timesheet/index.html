@@ -147,6 +147,7 @@
         var employeeDataDb = snapshot.val();
         var startDate = moment(employeeDataDb.start, "YYYY-MM-DD");
         var monthsWorked = moment().diff(startDate, "months");
+        var totalBill = monthsWorked*employeeDataDb.rate;
 
         // 1. Make a new <tr> element
         var newRow = $("<tr>").append(
@@ -156,6 +157,7 @@
             $("<td>").text(startDate.format("MM/DD/YYYY")),
             $("<td>").text(monthsWorked),
             $("<td>").text(employeeDataDb.rate),
+            $("<td>").text(totalBill),
         );
         // 3. Append tr element to the tbody
         $("#employee-row").append(newRow);
