@@ -130,7 +130,11 @@
         employeeInfo.role.length > 0 &&
         employeeInfo.start.length > 0 &&
         employeeInfo.rate.length > 0) {
+            
             database.ref().push(employeeInfo)
+        }
+        else {
+          console.log("---Missing info---")
         }
     });
 
@@ -156,8 +160,8 @@
             $("<td>").text(employeeDataDb.role),
             $("<td>").text(startDate.format("MM/DD/YYYY")),
             $("<td>").text(monthsWorked),
-            $("<td>").text(employeeDataDb.rate),
-            $("<td>").text(totalBill),
+            $("<td>").text("$"+employeeDataDb.rate),
+            $("<td>").text("$"+totalBill),
         );
         // 3. Append tr element to the tbody
         $("#employee-row").append(newRow);
