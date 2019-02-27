@@ -29,7 +29,7 @@ function Character(name, profession, gender, age, strength, HP) {
 
 }
 
-var fighter = new Character("Joe", "Fighter", "Male", 22, 23, 500);
+var fighter = new Character("Joe", "Fighter", "Male", 22, 200, 500);
 var mage = new Character("Sarah", "Mage", "Female", 27, 87, 200);
 var healer = new Character("Ann", "Healer", "Female", 67, 9, 300);
 
