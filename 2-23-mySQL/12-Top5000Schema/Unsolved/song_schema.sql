@@ -27,3 +27,4 @@ CREATE TABLE albums (
 );
 
 select * from albums;
+show tables;
