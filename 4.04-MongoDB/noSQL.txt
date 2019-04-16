@@ -1,0 +1,30 @@
+Database - Database
+Table - Collection
+Row - Document
+Column - Field
+
+
+Avantages of using noSQL db according to MongoDB?
+- Stores data in flexible, JSON-like documents. Fields can vary from document to document and data structure can be changed over time.
+- Scalability. Cluster Scale, Performance Scale and Data Scale.
+- OOP that is easy to use and flexible.
+
+Advantages of using noSQL db according to the web?
+- Able to handle large volumes of structured, semi-strucutred, and unstructured data.
+- 
+
+Disadvantages of using noSQL db like Mongo.
+- Fairly new and not as mature as other relational databases (RDBMS).
+- Open sourcce, and lack of maturity results in less support.
+- Less experts in the field knows noSQL.
+
+
+STRUCTURED DATA
+
+
+
+
+UNSTRUCTURED DATA
+
+
+INSTALLATION
